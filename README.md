@@ -8,7 +8,9 @@ A simple wizard for React Native
 ```
 import Wizard from './components/wizard';
 
- <Wizard onEnd={() => console.log('end')}>
+ <Wizard onEnd={() => console.log('end')} 
+    onNext={screen => console.log(screen)} 
+    onPrev={screen => console.log(screen)}>
     <Wizard.Step>
        <Text>Step 1</Text>
     </Wizard.Step>
