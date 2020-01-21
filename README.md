@@ -9,10 +9,19 @@ A simple wizard for React Native
 import Wizard from './components/wizard';
 
  <Wizard onEnd={() => console.log('end')}>
-    <Wizard.Step key={index}>
+    <Wizard.Step>
+       <Text>Step 1</Text>
     </Wizard.Step>
-    <Wizard.Step key={index}>
+    <Wizard.Step>
+       <Text>Step 1</Text> 
     </Wizard.Step>
 </Wizard>
 ```
 
+## props
+
+| Props        | Description                         | Type          |
+| ------------ | ----------------------------------- | ------------- |
+| onEnd        | Trigger when click on finish button | void |
+| onNext       | Trigger when click on next button   | int  |
+| onPrev       | Trigger when click on prev button   | int  |
