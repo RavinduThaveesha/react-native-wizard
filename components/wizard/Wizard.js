@@ -19,7 +19,11 @@ class Wizard extends Component {
         if (this.state.index !== this.props.children.length - 1) {
             this.setState(prevState => ({
                 index: prevState.index + 1,
-            }));
+            }), () => {
+				if(this.props.onNext) {
+					this.props.onNext(this.state.index);
+				}
+			});
         }
     };
 
@@ -27,7 +31,11 @@ class Wizard extends Component {
         if (this.state.index !== 0) {
             this.setState(prevState => ({
                 index: prevState.index - 1,
-            }));
+            }), () => {
+				if(this.props.onPrev) {
+					this.props.onPrev(this.state.index);
+				}
+			});
         }
     };
 
